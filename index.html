@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sauna Weather</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 지역 선택 -->
+    <nav class="cities">
+
+        <button class="active" data-city="서울">서울</button>
+        <button data-city="인천">인천</button>
+        <button data-city="춘천">춘천</button>
+        <button data-city="강릉">강릉</button>
+        <button data-city="대전">대전</button>
+        <button data-city="대구">대구</button>
+        <button data-city="광주">광주</button>
+        <button data-city="부산">부산</button>
+        <button data-city="제주">제주</button>
+
+    </nav>
+
+
+    <!-- 메인 날씨 -->
+    <main>
+
+        <section class="main-weather">
+
+            <div id="city">서울</div>
+
+            <div class="temperature">
+                <span id="temperature">--</span>°
+            </div>
+
+            <div class="sauna-type" id="saunaType">
+                불러오는 중...
+            </div>
+
+            <div class="description" id="description">
+                날씨 정보를 불러오는 중입니다.
+            </div>
+
+            <div class="high-low">
+                최고 <span id="maxTemp">--</span>°
+                최저 <span id="minTemp">--</span>°
+            </div>
+
+        </section>
+
+
+        <!-- 시간별 날씨 -->
+        <section class="hourly-box">
+
+            <h3>시간별 찜질방</h3>
+
+            <div id="hourlyWeather" class="hourly-list"></div>
+
+        </section>
+
+
+        <!-- 체감온도 / 습도 -->
+        <section class="info-container">
+
+            <div class="info-box">
+
+                <div class="info-title">
+                    체감온도
+                </div>
+
+                <div class="info-value">
+                    <span id="feelsLike">--</span>°
+                </div>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <div class="info-title">
+                    습도
+                </div>
+
+                <div class="info-value">
+                    <span id="humidity">--</span>%
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <p class="source">
+            기상청 데이터를 기반으로 제작된 사우나 날씨 정보입니다.
+        </p>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
